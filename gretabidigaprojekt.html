@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Pszichológia</title>
+
+<style>
+
+/* ALAP */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #1a0033, #2a0a5e, #001f4d);
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(90deg, #8a2be2, #00bfff);
+}
+
+header h1 {
+    font-size: 55px;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    background: black;
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #8a2be2;
+}
+
+/* SECTION */
+section {
+    padding: 30px;
+    margin: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(45deg, #8a2be2, #00bfff);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* BUTTON */
+button {
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #8a2be2;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00bfff;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+/* ANIMÁCIÓ */
+.fade {
+    animation: fade 2s;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🧠 Pszichológia</h1>
+    <p>Az emberi elme és viselkedés világa</p>
+</header>
+
+<nav>
+    <a href="#mi">Alapok</a>
+    <a href="#agy">Agy</a>
+    <a href="#tudat">Tudat</a>
+    <a href="#erzelmek">Érzelmek</a>
+    <a href="#manipulacio">Manipuláció</a>
+    <a href="#erdekesseg">Érdekességek</a>
+    <a href="#teszt">Teszt</a>
+</nav>
+
+<section id="mi" class="fade">
+<h2>Mi az a pszichológia?</h2>
+
+<p>
+A pszichológia az emberi gondolkodás, viselkedés és érzelmek tudománya.
+Megpróbálja megérteni, mi történik a fejünkben és miért.
+</p>
+
+<div class="card">
+🧠 Az emberek döntéseinek nagy része tudattalan!
+</div>
+
+<p>
+A pszichológia segít abban, hogy jobban megértsük önmagunkat és másokat.
+</p>
+
+</section>
+
+<section id="agy" class="fade">
+<h2>Az agy működése</h2>
+
+<p>
+Az agy több milliárd idegsejtből áll, és folyamatosan dolgozik.
+</p>
+
+<div class="card">
+⚡ Az agy még alvás közben is aktív!
+</div>
+
+<p>
+Ez irányítja a gondolatainkat, érzéseinket és mozgásunkat.
+</p>
+
+</section>
+
+<section id="tudat" class="fade">
+<h2>Tudat és tudatalatti</h2>
+
+<p>
+A tudatalatti hatalmas szerepet játszik a döntéseinkben.
+</p>
+
+<div class="card">
+😮 Sokszor előbb döntesz, és csak utána talál ki az agyad magyarázatot!
+</div>
+
+</section>
+
+<section id="erzelmek" class="fade">
+<h2>Érzelmek</h2>
+
+<div class="card">❤️ Szeretet</div>
+<div class="card">😡 Harag</div>
+<div class="card">😨 Félelem</div>
+
+<p>
+Az érzelmek gyorsabbak, mint a logika, ezért sokszor irányítják a döntéseinket.
+</p>
+
+</section>
+
+<section id="manipulacio" class="fade">
+<h2>Manipuláció</h2>
+
+<p>
+A manipuláció az, amikor valaki befolyásolja a gondolkodásodat.
+</p>
+
+<ul>
+<li>Reklámok</li>
+<li>Közösségi média</li>
+<li>Társas nyomás</li>
+</ul>
+
+<div class="card">
+⚠️ Az érzelmekkel könnyű irányítani az embereket!
+</div>
+
+</section>
+
+<section id="erdekesseg" class="fade">
+<h2>Érdekes tények</h2>
+
+<div class="card">😳 Az első benyomás 7 másodperc alatt kialakul!</div>
+<div class="card">📱 A telefonfüggőség valós jelenség!</div>
+<div class="card">💤 Az alvás hiánya rontja a gondolkodást!</div>
+
+</section>
+
+<section id="teszt" class="fade">
+<h2>Mini teszt</h2>
+
+<p>Mit választasz?</p>
+
+<button onclick="teszt('A')">Kaland</button>
+<button onclick="teszt('B')">Biztonság</button>
+
+<p id="eredmeny"></p>
+
+</section>
+
+<footer>
+<p>Készítette: Bidiga Greta 💜💙</p>
+</footer>
+
+<script>
+function teszt(v) {
+    let text = "";
+
+    if(v === "A") {
+        text = "Bátor és kockázatvállaló vagy!";
+    } else {
+        text = "Megfontolt és biztonságra törekvő vagy!";
+    }
+
+    document.getElementById("eredmeny").innerText = text;
+}
+</script>
+
+</body>
+</html>
